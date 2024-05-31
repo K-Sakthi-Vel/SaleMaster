@@ -1,4 +1,4 @@
-Welcome to my application SaleMster!!!
+This is Sakthivel, Welcome to my application SaleMster!!!
 
 SaleMaster is a statictics oriented application where we can effienciently handle our sales details and sold items.
 
