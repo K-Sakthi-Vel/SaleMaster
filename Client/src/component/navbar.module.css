@@ -1,0 +1,17 @@
+.nav{
+    height: 70px;
+    width: 100%;
+    background-color: chartreuse;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0;
+    border-bottom: 1px solid gray;
+}
+.appname{
+    font-size:2rem;
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    font-weight: 900;
+}

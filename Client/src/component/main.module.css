@@ -1,0 +1,77 @@
+.main_div{
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-color: aliceblue; 
+    padding-top: 10px;  
+}
+.dashboard{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: gray;
+    margin-left: 20px;
+}
+table, th, td {
+    
+    border: 10px solid white;
+    border-collapse: collapse;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    text-align: center;
+}
+th{
+    color: blueviolet;
+    font-size: 1.5rem;
+}
+td{
+    font-size: 1rem;
+}
+table{
+    position: relative;
+    height: 85%;
+    width: 97%;
+}
+th, td {
+    background-color: #96D4D4;
+    padding: 10px;
+}
+table img{
+    height: 100px;
+    width: 100px;
+}
+.page_navigation,.statistics{
+    position: relative;
+    width: 95%;
+    height: 70px;
+    background-color: lightcyan;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page_navigation button,.statistics button{
+    all: unset;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    padding: 5px;
+
+}
+.page_navigation button:hover{
+    scale: 0.97;    
+    cursor: pointer;
+}
+.statistics button{
+    margin: auto;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.statistics button:hover{
+    cursor: pointer;
+    border: 2px solid violet;
+}
+
+
