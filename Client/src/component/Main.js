@@ -40,7 +40,7 @@ const Main = (props) => {
 
         async function fetchProducts(){
             // fetching data from 3rd party API
-            await axios.get("/roxiler.com/product_transaction.json")
+            await axios.get("https://s3.amazonaws.com/roxiler.com/product_transaction.json")
             .then(res=>{
                     // seed the data into database also communicating with backend
                     axios.post("https://salemaster.onrender.com/seed_database",{products:res.data})
