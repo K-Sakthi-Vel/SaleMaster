@@ -43,7 +43,7 @@ const Main = (props) => {
             await axios.get("/roxiler.com/product_transaction.json")
             .then(res=>{
                     // seed the data into database also communicating with backend
-                    axios.post("http://localhost:3001/seed_database",{products:res.data})
+                    axios.post("https://salemaster.onrender.com/seed_database",{products:res.data})
                     .then(console.log("Data added"))
                     .catch(err=>console.log(err))
                 }
@@ -57,7 +57,7 @@ const Main = (props) => {
 
     useEffect(()=>{
         // getting the data from mongodb and set to local state
-        axios.get("http://localhost:3001/get_products")
+        axios.get("https://salemaster.onrender.com/get_products")
         .then(res => setProducts(res.data["0"].products))
         .catch(err=>console.log(err))
 
