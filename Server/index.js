@@ -3,13 +3,47 @@ const express = require("express");
 // requiring mongoose
 const mongoose = require("mongoose");
 // getting database schema to communicate with db
-const Product = require("./Models/schema")
-// conneting to database
-mongoose.connect("mongodb://127.0.0.1/sale_master")
-// cors for allow external domain api call's
-const cors = require("cors")
+const Product = require("./Models/schema");
+
+const NODE_ENV = 'production';
 
 const app = express();
+
+// conneting to database
+mongoose.connect(
+  
+  'mongodb+srv://mechonsakthi44:0jF7SL25fpG3ndDD@salemaster.f3lotsd.mongodb.net/?retryWrites=true&w=majority',
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
+
+const db = mongoose.connection;
+
+db.once('open',()=>{
+    console.log("Connected to database :: MongoDB")
+});
+// cors for allow external domain api call's
+const cors = require("cors");
+
+const path = require("path");
+
+const __dirname1 = path.resolve();
+
+if(NODE_ENV === 'production'){
+    app.use(express.static(path.join(__dirname1,'../Client/build')))
+
+    app.get("*",(req,res)=>{
+        res.sendFile(path.resolve(__dirname1,"Client","build","index.html"));
+    })
+}
+else{
+    app.get("/",function(req,res){
+        res.send("App running Successfully")
+    })
+}
+
 // using as middleware
 app.use(cors());
 
